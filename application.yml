@@ -1,0 +1,33 @@
+spring:
+  mvc:
+    view:
+      suffix: .html
+      prefix: /page/
+  application:
+    name: demo
+  datasource:
+    driver-class-name: dm.jdbc.driver.DmDriver
+#     localhost
+    url: jdbc:dm://10.183.199.113:5236/ADMIN?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+    username: ADMIN
+    password: 123456789
+mybatis:
+  typeAliasesPackage: com.example.demo.mapper
+  mapper-locations: classpath:/mapper/*.xml
+  log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  pagehelper:
+    reasonable: false
+    supportMethodsArguments: true
+    pageSizeZero: false
+    params: count=countSql
+server:
+  port: 9000
+#logging:
+#  level:
+#  com.example.demo.timetask: INFO
+#    file: demo.log
+
+
+
+
+
